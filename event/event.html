@@ -1,0 +1,538 @@
+<!DOCTYPE html>
+
+<html class="dark" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>GWIS OPEN: 2026 | GRAND WISATA INLINE SKATE</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700;900&amp;family=Manrope:wght@300;400;500;600;700;800&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+          darkMode: "class",
+          theme: {
+            extend: {
+              "colors": {
+                      "error-container": "#93000a",
+                      "tertiary-container": "#c84000",
+                      "on-primary": "#002a78",
+                      "surface-container": "#201f1f",
+                      "inverse-on-surface": "#313030",
+                      "outline": "#8c90a2",
+                      "on-tertiary-container": "#fff1ed",
+                      "on-secondary-fixed-variant": "#7a3000",
+                      "secondary": "#ffb692",
+                      "surface-container-low": "#1c1b1b",
+                      "secondary-fixed": "#ffdbcb",
+                      "primary-container": "#000080",//"#0062ff",
+                      "surface-container-lowest": "#0e0e0e",
+                      "on-tertiary-fixed-variant": "#832700",
+                      "on-tertiary-fixed": "#390c00",
+                      "surface-tint": "#b4c5ff",
+                      "on-secondary": "#562000",
+                      "primary-fixed": "#dbe1ff",
+                      "tertiary": "#ffb59c",
+                      "secondary-container": "#fd6c00",
+                      "primary-fixed-dim": "#b4c5ff",
+                      "on-secondary-fixed": "#341100",
+                      "on-primary-fixed-variant": "#003ea8",
+                      "on-error": "#690005",
+                      "tertiary-fixed": "#ffdbcf",
+                      "primary": "#b4c5ff",
+                      "inverse-primary": "#0053da",
+                      "surface-variant": "#353534",
+                      "secondary-fixed-dim": "#ffb692",
+                      "on-tertiary": "#5c1900",
+                      "surface-container-high": "#2a2a2a",
+                      "inverse-surface": "#e5e2e1",
+                      "error": "#ffb4ab",
+                      "on-background": "#e5e2e1",
+                      "surface": "#131313",
+                      "on-secondary-container": "#562000",
+                      "on-primary-container": "#f3f3ff",
+                      "tertiary-fixed-dim": "#ffb59c",
+                      "surface-dim": "#131313",
+                      "surface-bright": "#393939",
+                      "on-surface-variant": "#c2c6d9",
+                      "on-primary-fixed": "#00174b",
+                      "surface-container-highest": "#353534",
+                      "outline-variant": "#424656",
+                      "background": "#131313",
+                      "on-error-container": "#ffdad6",
+                      "on-surface": "#e5e2e1"
+              },
+              "borderRadius": {
+                      "DEFAULT": "0.125rem",
+                      "lg": "0.25rem",
+                      "xl": "0.5rem",
+                      "full": "0.75rem"
+              },
+              "fontFamily": {
+                      "headline": ["Space Grotesk"],
+                      "display": ["Space Grotesk"],
+                      "body": ["Manrope"],
+                      "label": ["Manrope"]
+              }
+            },
+          }
+        }
+    </script>
+<style>
+        body {
+            background-color: #131313;
+            background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 200 200' xmlns='http://www.w3.org/2000/svg'%3Cfilter id='noiseFilter'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.65' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noiseFilter)'/%3E%3C/svg%3E");
+            background-blend-mode: overlay;
+        }
+        .kinetic-notch {
+            clip-path: polygon(0 0, 100% 0, 100% 100%, 8% 100%, 0 92%);
+        }
+        .kinetic-skew {
+            transform: skewX(-6deg);
+        }
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+    </style>
+</head>
+<body class="font-body text-on-surface">
+<header class="fixed top-0 left-0 w-full z-50 bg-surface/80 backdrop-blur-xl border-b border-outline-variant/10">
+<nav class="flex justify-between items-center w-full px-8 py-6 max-w-[1440px] mx-auto">
+<div class="text-2xl italic font-black text-primary tracking-tight font-headline">
+    <a href="/" class="flex items-center">
+        <img 
+            src="../event/assets/bulat-gwis-logo.png" 
+            alt="GWIS"
+            width="160"
+            height="160"
+            class="h-12 w-auto object-contain hover:scale-110 transition-transform duration-300 cursor-pointer"
+        />
+    </a>
+</div>
+<div class="hidden md:flex gap-8 font-display font-bold tracking-tighter uppercase">
+<a class="text-outline hover:text-primary transition-all duration-300" href="#" data-id="Katalog" data-en="Catalog">Catalog</a>
+<a class="text-outline hover:text-primary transition-all duration-300" href="#" data-id="Galeri" data-en="Gallery">Gallery</a>
+<a class="text-outline hover:text-primary transition-all duration-300" href="#" data-id="Berita" data-en="News">News</a>
+<a class="text-primary border-b-2 border-primary-container pb-1" href="#" data-id="Acara" data-en="Events">Events</a>
+<a class="text-outline hover:text-primary transition-all duration-300" href="#" data-id="Dasbor" data-en="Dashboard">Dashboard</a>
+</div>
+<div class="flex items-center gap-1">
+    <div onclick="toggleLanguage()"
+        class="relative w-20 h-10 bg-surface-container-high rounded-full cursor-pointer transition-all duration-300"
+        id="lang-toggle">
+
+        <!-- Bulatan geser -->
+        <div id="lang-knob"
+            class="absolute top-1 left-1 w-8 h-8 bg-primary-container rounded-full shadow-md transition-all duration-300 flex items-center justify-center text-[10px] font-bold text-on-primary-container">
+            ID
+        </div>
+
+    </div>
+
+    <span id="lang-label"
+        class="text-sm font-semibold text-outline transition-all duration-300 ml-0.5">
+        Indonesia
+    </span>
+</div>
+    <button
+        data-id="Masuk"
+        data-en="Login"
+        class="bg-primary-container text-on-primary-container px-6 py-2 rounded-lg font-bold tracking-tighter uppercase transition-transform active:scale-95">
+        Login
+    </button>
+</div>
+</nav>
+</header>
+<main class="pt-24">
+<!-- Hero Section -->
+<section class="relative py-20 px-8 max-w-[1440px] mx-auto text-center">
+<div class="absolute inset-0 bg-gradient-to-b from-primary-container/5 to-transparent -z-10"></div>
+<span class="inline-block px-4 py-1 mb-6 bg-tertiary-container text-on-tertiary-container rounded-full text-xs font-bold uppercase tracking-widest" data-id="Acara Spektakuler di 2026" data-en="Spectaculer Event at 2026">Spectaculer Event at 2026</span>
+<h1 class="font-display text-6xl md:text-8xl font-black text-on-primary-container leading-none tracking-tighter mb-4 italic uppercase">
+                GWIS OPEN:<br/>2026
+            </h1>
+<p class="font-display text-2xl font-bold text-primary mb-8 tracking-tighter italic">SEP 4TH - 6TH, 2026</p>
+<div class="max-w-4xl mx-auto mb-12 rounded-2xl overflow-hidden border-4 border-surface-container-highest shadow-2xl relative group">
+<img alt="Tokyo Finals" class="w-full h-[400px] object-cover transition-transform duration-700 group-hover:scale-105" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCYHAOp59SKQcgrTXXo5-gY2IVTYRUeHYgWg7pUn-ZvPSiIIOGp0iiHtbaaf692CTxTALNCL_VmxGS41-gA1phMaBRV3W-rJgFRELsHesjwZ-2YJMq65CMZoX66_qMITRlmhalE1w4fl2elvVl_CABL2cQ_JcO4O2nO08ZfV6RckxUAEyrf26njgWuzyQqVZvNg54QGcReFQKyVxvIuShQQQdrvKqJLJN7oEiH5RvHvp_351K3yhJn-qtlpGQD_ksSnA1bD8h_5ufFG"/>
+<div class="absolute bottom-6 left-1/2 -translate-x-1/2 w-full max-w-sm">
+<button class="w-full bg-surface-container-lowest/90 backdrop-blur-md text-on-surface py-3 rounded-lg font-bold uppercase tracking-widest flex items-center justify-center gap-2 hover:bg-white hover:text-black transition-colors">
+<span class="material-symbols-outlined text-sm">location_on</span>
+                        INTERNATIONAL SKATING RINK ARENA GRAND WISATA, BEKASI
+                    </button>
+</div>
+</div>
+<div class="flex flex-col md:flex-row justify-center items-center gap-8 bg-surface-container-high/50 p-8 rounded-2xl border border-outline-variant/20 backdrop-blur-sm max-w-4xl mx-auto">
+<div class="flex-1 text-left">
+<div class="text-[10px] font-bold uppercase tracking-widest text-outline mb-4">Registration Closes In</div>
+<div class="grid grid-cols-4 gap-4">
+<div class="text-center">
+<!-- <div class="text-3xl font-display font-black text-primary">02</div> -->
+<div id="days" class="text-3xl font-display font-black text-primary">00</div>
+<div class="text-[8px] uppercase tracking-widest text-outline">Days</div>
+</div>
+<div class="text-center">
+<!-- <div class="text-3xl font-display font-black text-primary">14</div> -->
+<div id="hours" class="text-3xl font-display font-black text-primary">00</div>
+<div class="text-[8px] uppercase tracking-widest text-outline">Hrs</div>
+</div>
+<div class="text-center">
+<!-- <div class="text-3xl font-display font-black text-primary">35</div> -->
+<div id="minutes" class="text-3xl font-display font-black text-primary">00</div>
+<div class="text-[8px] uppercase tracking-widest text-outline">Mins</div>
+</div>
+<div class="text-center">
+<!-- <div class="text-3xl font-display font-black text-secondary animate-pulse">08</div> -->
+<div id="seconds" class="text-3xl font-display font-black text-secondary animate-pulse">00</div>
+<div class="text-[8px] uppercase tracking-widest text-outline">Secs</div>
+</div>
+</div>
+</div>
+<div class="h-16 w-px bg-outline-variant/30 hidden md:block"></div>
+<button class="bg-primary-container text-on-primary-container px-12 py-5 rounded-xl font-display font-black text-2xl italic uppercase tracking-tighter transition-all hover:scale-105 active:scale-95 shadow-lg shadow-primary-container/20">
+                    Register Now
+                </button>
+</div>
+</section>
+<!-- Event Hub / Quick Access -->
+<section class="py-24 px-8 max-w-[1440px] mx-auto">
+<div class="flex items-end gap-4 mb-12">
+<h2 class="font-display text-4xl font-black italic tracking-tighter uppercase">DETAILS <span class="text-primary">Hub</span></h2>
+<span class="text-outline text-xs font-bold uppercase tracking-widest mb-1.5">// Quick Access &amp; Data</span>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-12 gap-6">
+<!-- WhatsApp -->
+<div class="md:col-span-8 bg-primary text-on-primary p-8 rounded-2xl flex justify-between items-center group cursor-pointer overflow-hidden relative">
+<div class="relative z-10">
+<div class="text-[10px] font-bold uppercase tracking-widest opacity-80 mb-2">Contact</div>
+<h3 class="text-3xl font-display font-black italic tracking-tight">Admin GWIS OPEN 2026<br/>WHATSAPP</h3>
+</div>
+<div class="w-16 h-16 rounded-full bg-on-primary/10 flex items-center justify-center relative z-10 transition-transform group-hover:scale-110">
+<span class="material-symbols-outlined text-3xl" style="font-variation-settings: 'FILL' 1">chat</span>
+</div>
+<div class="absolute -right-8 -bottom-8 w-48 h-48 bg-white/5 rounded-full blur-3xl"></div>
+</div>
+<!-- Handbook -->
+<div class="md:col-span-4 bg-surface-container-high p-8 rounded-2xl border border-outline-variant/20 hover:border-primary/50 transition-all group cursor-pointer flex flex-col justify-between">
+<div class="flex justify-between items-start">
+<div class="w-12 h-12 rounded-xl bg-surface-container-highest flex items-center justify-center text-primary">
+<span class="material-symbols-outlined">menu_book</span>
+</div>
+<span class="material-symbols-outlined text-outline group-hover:text-primary transition-colors">north_east</span>
+</div>
+<div class="mt-8">
+<h3 class="text-2xl font-display font-bold italic mb-2">THB</h3>
+<p class="text-sm text-outline">Regulations, Schedule, and technical race requirements.</p>
+<button class="mt-6 flex items-center gap-2 text-xs font-bold uppercase tracking-widest text-primary">
+                            Read Now <span class="material-symbols-outlined text-sm">arrow_forward</span>
+</button>
+</div>
+</div>
+<!-- Instagram -->
+<div class="md:col-span-6 bg-surface-container-high p-8 rounded-2xl border border-outline-variant/20 overflow-hidden relative group cursor-pointer">
+<div class="relative z-10 h-full flex flex-col justify-between">
+<div>
+<div class="flex items-center gap-2 text-[10px] font-bold uppercase tracking-widest text-secondary mb-4">
+<span class="w-1.5 h-1.5 rounded-full bg-secondary"></span>
+                                @grandwisata_inlineskate
+                            </div>
+<h3 class="text-3xl font-display font-black italic mb-6">LATEST UPDATES</h3>
+</div>
+<button class="w-fit bg-white/5 backdrop-blur-md border border-white/10 px-4 py-2 rounded-lg text-xs font-bold flex items-center gap-2 hover:bg-white/10 transition-colors">
+<span class="material-symbols-outlined text-base">photo_camera</span>
+                            Follow Instagram
+                        </button>
+</div>
+<span class="absolute -right-4 -bottom-4 material-symbols-outlined text-[120px] opacity-5 text-on-surface">camera</span>
+</div>
+<!-- Assistant -->
+<div class="md:col-span-3 bg-white text-surface p-8 rounded-2xl flex flex-col justify-between group cursor-pointer">
+<div class="w-10 h-10 rounded-lg bg-surface flex items-center justify-center text-white">
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1">smart_toy</span>
+</div>
+<div>
+<!-- <h3 class="text-xl font-display font-bold italic leading-tight mb-1">VELOCITY AI</h3>
+<p class="text-[10px] font-bold text-outline uppercase tracking-widest">Official Event Assistant</p>
+<button class="mt-4 w-full py-2 border border-surface/20 rounded-lg text-[10px] font-bold uppercase tracking-widest hover:bg-surface hover:text-white transition-colors">Ask Question</button> -->
+</div>
+</div>
+<!-- Twibbon -->
+<!-- <div class="md:col-span-3 bg-secondary text-on-secondary p-8 rounded-2xl flex flex-col justify-center items-center text-center group cursor-pointer">
+<div class="w-16 h-16 rounded-full bg-on-secondary/10 flex items-center justify-center mb-4 group-hover:scale-110 transition-transform">
+<span class="material-symbols-outlined text-3xl">download</span>
+</div>
+<h3 class="font-display font-bold italic uppercase leading-none">Download<br/>Twibbon</h3>
+</div>
+</div> -->
+<div class="md:col-span-3 bg-primary-container text-on-primary-container p-8 rounded-2xl flex flex-col justify-center items-center text-center group cursor-pointer hover:scale-[1.02] transition-all">
+<div class="w-16 h-16 rounded-full bg-white/10 flex items-center justify-center mb-4 group-hover:scale-110 transition-transform">
+<span class="material-symbols-outlined text-3xl text-white">download</span>
+</div>
+<h3 class="font-display font-bold italic uppercase leading-none">Download<br/>Twibbon</h3>
+</div>
+</section>
+<!-- Event Schedule -->
+<section class="py-24 px-8 max-w-[1440px] mx-auto bg-surface-container-lowest/50">
+<div class="text-center mb-16">
+<div class="flex items-center justify-center gap-2 text-primary mb-4">
+<span class="material-symbols-outlined text-sm">calendar_month</span>
+<span class="text-xs font-bold uppercase tracking-widest">Mark the Date</span>
+</div>
+<h2 class="font-display text-5xl md:text-6xl font-black italic tracking-tighter uppercase">Event <span class="text-primary">Schedule</span></h2>
+</div>
+<div class="grid grid-cols-1 lg:grid-cols-12 gap-12">
+<!-- Pre-Race -->
+<div class="lg:col-span-4 space-y-6">
+<div class="flex items-center gap-3 mb-8">
+<span class="material-symbols-outlined text-primary">history</span>
+<h4 class="font-display text-xl font-bold italic tracking-tight uppercase">Pre-Race Schedule</h4>
+</div>
+<!-- Step 1 -->
+<div class="bg-surface-container-high p-6 rounded-xl border-l-4 border-error relative">
+<div class="text-[10px] font-bold text-error uppercase tracking-widest mb-1">25 April 2026</div>
+<h5 class="font-bold italic uppercase tracking-tighter mb-1">REGISTRATION DEADLINE</h5>
+<p class="text-xs text-outline">Final call for athlete registration and document submission.</p>
+</div>
+<!-- Step 2 -->
+<div class="bg-surface-container-high p-6 rounded-xl border-l-4 border-secondary relative">
+<div class="text-[10px] font-bold text-secondary uppercase tracking-widest mb-1">26 April 2026</div>
+<h5 class="font-bold italic uppercase tracking-tighter mb-1">PAYMENT CLEARANCE</h5>
+<p class="text-xs text-outline">All outstanding fees must be finalized for bracket entry.</p>
+</div>
+<!-- Step 3 -->
+<div class="bg-surface-container-high p-6 rounded-xl border-l-4 border-primary relative">
+<div class="text-[10px] font-bold text-primary uppercase tracking-widest mb-1">30 April 2026</div>
+<h5 class="font-bold italic uppercase tracking-tighter mb-1">TECHNICAL MEETING</h5>
+<p class="text-xs text-outline">16:00 - 18:00 @ Odaiba Arena Conference Hall.</p>
+</div>
+</div>
+<!-- Competition Days -->
+<div class="lg:col-span-8 space-y-6">
+<div class="flex items-center gap-3 mb-8">
+<span class="material-symbols-outlined text-secondary">flag</span>
+<h4 class="font-display text-xl font-bold italic tracking-tight uppercase">Competition Days</h4>
+</div>
+<!-- Day 1 -->
+<div class="bg-surface-container-high/50 rounded-2xl border border-outline-variant/10 overflow-hidden">
+<div class="flex flex-col md:flex-row">
+<div class="bg-primary/10 p-6 md:w-32 flex flex-col items-center justify-center text-center border-b md:border-b-0 md:border-r border-outline-variant/10">
+<span class="text-[10px] font-bold text-outline uppercase tracking-widest">Day 1</span>
+<span class="text-4xl font-display font-black text-primary">01</span>
+<span class="text-xs font-bold text-outline uppercase tracking-widest">May</span>
+</div>
+<div class="p-6 flex-1 space-y-4">
+<div class="flex justify-between items-start">
+<div class="flex items-center gap-4">
+<span class="text-xs font-black text-primary font-display">07:30 - FINISH</span>
+<div class="space-y-1">
+<p class="text-sm font-bold uppercase tracking-tighter">Elimination Heats (Junior - Pro)</p>
+<p class="text-[10px] text-outline font-semibold uppercase">Standard 500m+D Heats</p>
+</div>
+</div>
+<span class="bg-primary-container text-on-primary-container text-[8px] font-black px-2 py-0.5 rounded uppercase">Starts</span>
+</div>
+<div class="h-px bg-outline-variant/10"></div>
+<div class="flex items-center gap-4">
+<span class="text-xs font-black text-primary font-display">14:00 - 18:00</span>
+<p class="text-sm font-bold uppercase tracking-tighter">Speed DTT 200m Qualifiers</p>
+</div>
+</div>
+</div>
+</div>
+<!-- Day 2 -->
+<div class="bg-surface-container-high/50 rounded-2xl border border-outline-variant/10 overflow-hidden">
+<div class="flex flex-col md:flex-row">
+<div class="bg-secondary/10 p-6 md:w-32 flex flex-col items-center justify-center text-center border-b md:border-b-0 md:border-r border-outline-variant/10">
+<span class="text-[10px] font-bold text-outline uppercase tracking-widest">Day 2</span>
+<span class="text-4xl font-display font-black text-secondary">02</span>
+<span class="text-xs font-bold text-outline uppercase tracking-widest">May</span>
+</div>
+<div class="p-6 flex-1 space-y-4">
+<div class="flex items-center gap-4">
+<span class="text-xs font-black text-secondary font-display">07:30 - 15:00</span>
+<div class="space-y-1">
+<p class="text-sm font-bold uppercase tracking-tighter">Standard 1000m &amp; 3000m Finals</p>
+</div>
+</div>
+<div class="h-px bg-outline-variant/10"></div>
+<div class="flex items-center gap-4">
+<span class="text-xs font-black text-secondary font-display">18:00 - 21:00</span>
+<div class="space-y-1">
+<p class="text-sm font-bold uppercase tracking-tighter text-on-surface">OPENING CEREMONY &amp; NIGHT PARADE</p>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Highlights Section -->
+<section class="py-24 px-8 max-w-[1440px] mx-auto">
+<div class="text-center mb-16">
+<div class="flex items-center justify-center gap-2 text-secondary mb-4">
+<span class="material-symbols-outlined text-sm">stars</span>
+<span class="text-xs font-bold uppercase tracking-widest">Highlights</span>
+</div>
+<h2 class="font-display text-5xl font-black italic tracking-tighter uppercase">FITUR &amp; PENGHARGAAN</h2>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+<!-- Awards & MVP -->
+<div class="bg-surface-container rounded-2xl p-8 border border-outline-variant/10 relative overflow-hidden group">
+<div class="absolute top-0 right-0 p-8">
+<span class="material-symbols-outlined text-6xl opacity-5 text-primary">emoji_events</span>
+</div>
+<div class="w-12 h-12 rounded-xl bg-primary/10 text-primary flex items-center justify-center mb-8">
+<span class="material-symbols-outlined">workspace_premium</span>
+</div>
+<h3 class="text-3xl font-display font-black italic uppercase mb-6">JUARA &amp; MVP</h3>
+<div class="space-y-6">
+<div class="bg-surface-container-low p-4 rounded-xl border-l-2 border-primary/30">
+<h4 class="text-xs font-black uppercase tracking-widest text-outline mb-2">JUARA UMUM</h4>
+<ul class="text-sm font-bold space-y-1">
+<li>• Speed: Rank 1, 2, 3</li>
+<li>• Standard: Rank 1</li>
+</ul>
+</div>
+<div class="bg-surface-container-low p-4 rounded-xl border-l-2 border-primary/30">
+<h4 class="text-xs font-black uppercase tracking-widest text-outline mb-2">MVP AWARDS</h4>
+<ul class="text-sm font-bold space-y-1">
+<li>• Overall Top Scorer</li>
+<li>• Tech Master Award</li>
+</ul>
+</div>
+</div>
+</div>
+<!-- Live Streaming -->
+<div class="bg-surface-container rounded-2xl p-8 border border-outline-variant/10 relative overflow-hidden group">
+<div class="absolute top-0 right-0 p-8">
+<span class="material-symbols-outlined text-6xl opacity-5 text-error">live_tv</span>
+</div>
+<div class="w-12 h-12 rounded-xl bg-error/10 text-error flex items-center justify-center mb-8">
+<span class="material-symbols-outlined">videocam</span>
+</div>
+<h3 class="text-3xl font-display font-black italic uppercase mb-6" data-id="SIARAN LANGSUNG" data-en="LIVE STREAMING">LIVE STREAMING</h3>
+<p class="text-outline text-sm mb-12 max-w-sm">Watch the elite competition live from anywhere. Complete schedule available during event dates.</p>
+<div class="space-y-4">
+<div class="flex items-center gap-2 text-[10px] font-bold text-error uppercase tracking-widest animate-pulse">
+<span class="w-2 h-2 rounded-full bg-error"></span>
+                            Live on YouTube GWIS TV
+                        </div>
+<button 
+    onclick="window.open('https://youtube.com/@gwis_tv?si=snHPesPehYzhczOB', '_blank')"
+    data-id="LIHAT CHANNEL"
+    data-en="VIEW CHANNEL"
+    class="w-full bg-error text-on-error py-4 rounded-xl font-bold uppercase tracking-widest flex items-center justify-center gap-2 hover:scale-[1.02] transition-transform">
+    <span class="material-symbols-outlined">smart_display</span>
+    LIHAT CHANNEL
+</button>
+</div>
+</div>
+</div>
+</section>
+</main>
+<!-- Footer -->
+<footer class="bg-[#0e0e0e] w-full border-t border-outline-variant/10">
+<div class="grid grid-cols-1 md:grid-cols-4 gap-12 px-12 py-20 w-full max-w-[1440px] mx-auto">
+<div>
+<div class="font-display text-xl font-black text-primary italic mb-6">GWIS</div>
+<p class="text-outline text-xs font-semibold tracking-wider leading-relaxed">
+                    The intersection of technical precision and urban motion. High-performance skating gear and elite competition series.
+                </p>
+</div>
+<div class="flex flex-col gap-4 font-body text-[12px] font-semibold tracking-[0.1em] uppercase">
+<h5 class="text-primary mb-2"></h5>
+<a class="text-outline hover:text-primary transition-colors" href="#"></a>
+<a class="text-outline hover:text-primary transition-colors" href="#"></a>
+<a class="text-outline hover:text-primary transition-colors" href="#"></a>
+</div>
+<div class="flex flex-col gap-4 font-body text-[12px] font-semibold tracking-[0.1em] uppercase">
+<h5 class="text-primary mb-2"></h5>
+<a class="text-outline hover:text-primary transition-colors" href="#"></a>
+<a class="text-outline hover:text-primary transition-colors" href="#"></a>
+</div>
+<div>
+<h5 class="text-primary mb-6 font-body text-[12px] font-semibold tracking-[0.1em] uppercase">Connect</h5>
+<div class="flex gap-4">
+<div class="w-10 h-10 rounded bg-surface-container flex items-center justify-center text-outline hover:text-primary transition-all cursor-pointer">
+<span class="material-symbols-outlined">public</span>
+</div>
+<div class="w-10 h-10 rounded bg-surface-container flex items-center justify-center text-outline hover:text-secondary transition-all cursor-pointer">
+<span class="material-symbols-outlined">share</span>
+</div>
+</div>
+</div>
+</div>
+<div class="px-12 py-8 border-t border-outline-variant/5 text-center">
+<p class="text-outline font-body text-[10px] font-bold uppercase tracking-[0.2em]">© 2026 GRAND WISATA INLINE SKATE.</p>
+</div>
+</footer>
+<script>
+// ================= COUNTDOWN =================
+const targetDate = new Date("Sep 4, 2026 07:30:00").getTime();
+
+setInterval(() => {
+    const now = new Date().getTime();
+    const distance = targetDate - now;
+
+    document.getElementById("days").innerText =
+        Math.floor(distance / (1000 * 60 * 60 * 24));
+
+    document.getElementById("hours").innerText =
+        Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+
+    document.getElementById("minutes").innerText =
+        Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+
+    document.getElementById("seconds").innerText =
+        Math.floor((distance % (1000 * 60)) / 1000);
+
+}, 1000);
+
+
+// ================= LANGUAGE =================
+let currentLang = localStorage.getItem('gwis_lang') || 'en';
+
+function applyLanguage(lang) {
+
+    const knob = document.getElementById('lang-knob');
+    const label = document.getElementById('lang-label');
+
+    if (lang === 'id') {
+        knob.style.transform = 'translateX(0)';
+        knob.innerText = 'ID';
+        label.innerText = 'Indonesia';
+    } else {
+        knob.style.transform = 'translateX(40px)';
+        knob.innerText = 'EN';
+        label.innerText = 'English';
+    }
+
+    // translate semua text
+    document.querySelectorAll('[data-id][data-en]').forEach(el => {
+
+        const icon = el.querySelector('.material-symbols-outlined');
+
+        const text = lang === 'id'
+            ? el.getAttribute('data-id')
+            : el.getAttribute('data-en');
+
+        if (icon) {
+            el.innerHTML = icon.outerHTML + " " + text;
+        } else {
+            el.innerHTML = text;
+        }
+
+    });
+
+    localStorage.setItem('gwis_lang', lang);
+    currentLang = lang;
+}
+
+function toggleLanguage() {
+    applyLanguage(currentLang === 'id' ? 'en' : 'id');
+}
+
+document.addEventListener("DOMContentLoaded", () => {
+    applyLanguage(currentLang);
+});
+</script>
+</body></html>
